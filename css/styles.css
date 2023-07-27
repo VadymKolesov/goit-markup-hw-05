@@ -762,7 +762,8 @@ body {
 }
 
 .form-button {
-  width: 169px;
+  display: block;
+  min-width: 169px;
   height: 56px;
   align-self: center;
 }
@@ -802,11 +803,16 @@ body {
   fill: transparent;
 }
 
-.form-checkbox:checked + .form-label-privacy span {
-  background-color: var(--iris);
-  border: none;
+.privacy-checkbox {
+  fill: transparent;
+  display: inline-flex;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-checkbox:checked + .form-label-privacy .check-icon {
+.form-checkbox:checked + .form-label-privacy .privacy-checkbox {
+  background-color: var(--iris);
+  border: none;
   fill: var(--cloud);
 }
