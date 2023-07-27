@@ -560,7 +560,10 @@ body {
 
 .subscribe-form {
   display: flex;
-  flex-direction: column;
+}
+
+.form-label-footer {
+  gap: 24px;
 }
 
 .subscribe-input {
@@ -569,9 +572,13 @@ body {
   background-color: transparent;
   border: 1px solid var(--white);
   border-radius: 4px;
-  padding: 0 16px;
+  padding-left: 16px;
   margin-right: 24px;
   color: var(--white);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   outline: none;
 }
 
@@ -583,15 +590,11 @@ body {
   color: var(--white);
 }
 
-.subscribe-input-items {
-  display: flex;
-}
-
 .subscribe-button {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background-color: var(--iris);
   color: var(--white);
